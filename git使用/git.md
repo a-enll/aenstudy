@@ -27,19 +27,19 @@
 
    复制整个项目目录的方式来保存不同的版本，如RCS。
 
-   <img src="D:\Typora\图像\local.png" alt="本地版本控制图解" style="zoom: 67%;" />
+   <img src="https://raw.githubusercontent.com/a-enll/FigureBed/main/img/202112211134014.png" alt="local" style="zoom:67%;" />
 
 2. 集中化的版本控制系统
 
    集中化的版本控制系统（Centralized Version Control Systems，简称 CVCS）是一种由单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新，代表产品：SVN、CVS、VSS。
 
-   <img src="D:\Typora\图像\centralized.png" alt="集中化的版本控制图解" style="zoom:67%;" />
+   <img src="https://raw.githubusercontent.com/a-enll/FigureBed/main/img/202112211136287.png" alt="centralized" style="zoom:67%;" />
 
 3. **分布式版本控制 	Git**
 
    分布式版本控制系统（Distributed Version Control System，简称 DVCS）客户端并不只提取最新版本的文件快照， 而是把代码仓库完整地镜像下来，包括完整的历史记录。 这么一来，任何一处协同工作用的服务器发生故障，事后都可以用任何一个镜像出来的本地仓库恢复。 因为每一次的克隆操作，实际上都是一次对代码仓库的完整备份。
 
-   <img src="D:\Typora\图像\distributed.png" alt="分布式版本控制图解" style="zoom:67%;" />
+   <img src="https://raw.githubusercontent.com/a-enll/FigureBed/main/img/202112211137916.png" alt="distributed" style="zoom:67%;" />
 
 # Git简史
 
@@ -69,7 +69,7 @@ Git迅速成为最流行的分布式版本控制系统，尤其是2008年，GitH
 
 Git 把数据看作是对小型文件系统的一系列快照。 提交更新或保存项目状态时，对当时的全部文件创建一个快照并保存这个快照的索引。 为了效率，如果文件没有修改，Git 不再重新存储该文件，而是只保留一个链接指向之前存储的文件。 Git 对待数据更像是一个 **快照流**。
 
-![Git 存储项目随时间改变的快照。](D:\Typora\图像\snapshots.png)
+<img src="https://raw.githubusercontent.com/a-enll/FigureBed/main/img/202112211138207.png" alt="snapshots" style="zoom:67%;" />
 
 > 存储项目随时间改变的快照
 
@@ -99,7 +99,7 @@ Git 把数据看作是对小型文件系统的一系列快照。 提交更新或
 
   - 已提交表示数据已经安全地保存在本地数据库中。
 
-    <img src="D:\Typora\图像\areas.png" alt="工作区、暂存区以及 Git 目录。" style="zoom:67%;" />
+    <img src="https://raw.githubusercontent.com/a-enll/FigureBed/main/img/202112211138122.png" alt="areas" style="zoom:67%;" />
 
 > 工作目录、暂存区域以及 Git 仓库
 
@@ -133,7 +133,7 @@ Git 自带一个 `git config` 的工具来帮助设置控制 Git 外观和行为
 
 查看配置 `git config -l`
 
-![image-20211220224628347](D:\Typora\图像\image-20211220224628347.png)
+![image-20211220224628347](https://raw.githubusercontent.com/a-enll/FigureBed/main/img/202112211139573.png)
 
 > 用户信息
 
@@ -180,7 +180,7 @@ John Doe
 
 Git本地有三个工作区域：工作目录（Working Directory）、暂存区(Stage/Index)、资源库(Repository或Git Directory)。如果在加上远程的git仓库(Remote Directory)就可以分为四个工作区域。文件在这四个区域之间的转换关系如下：
 
-![image-20211220231112415](D:\Typora\图像\image-20211220231112415.png)
+![image-20211220231112415](https://raw.githubusercontent.com/a-enll/FigureBed/main/img/202112211139255.png)
 
 - Workspace：工作区，就是你平时存放项目代码的地方
 - Index / Stage：暂存区，用于临时存放你的改动，事实上它只是一个文件，保存即将提交到文件列表信息
@@ -189,7 +189,7 @@ Git本地有三个工作区域：工作目录（Working Directory）、暂存区
 
 本地的三个区域确切的说应该是git仓库中HEAD指向的版本：
 
-![image-20211220231345536](D:\Typora\图像\image-20211220231345536.png)
+![image-20211220231345536](https://raw.githubusercontent.com/a-enll/FigureBed/main/img/202112211139700.png)
 
 - Directory：使用Git管理的一个目录，也就是一个仓库，包含我们的工作空间和Git的管理空间。
 - WorkSpace：需要通过Git进行版本控制的目录和文件，这些目录和文件组成了工作空间。
@@ -210,7 +210,7 @@ git的工作流程一般是这样的：
 
 因此，git管理的文件有三种状态：已修改（modified）,已暂存（staged）,已提交(committed)
 
-![图片](D:\Typora\图像\640.webp)
+![图片](https://raw.githubusercontent.com/a-enll/FigureBed/main/img/202112211139225.webp)
 
 # Git项目搭建
 
@@ -220,7 +220,7 @@ git的工作流程一般是这样的：
 
 日常使用只要记住下图6个命令
 
-![图片](D:\Typora\图像\640-16400135513187.webp)
+![图片](https://raw.githubusercontent.com/a-enll/FigureBed/main/img/202112211139157.webp)
 
 > 本地仓库搭建
 
@@ -292,9 +292,9 @@ doc/*.txt    #会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
 
 分支就是科幻电影里面的平行宇宙，如果两个平行宇宙互不干扰，那对现在的你也没啥影响。不过，在某个时间点，两个平行宇宙合并了，我们就需要处理一些问题了！
 
-![图片](D:\Typora\图像\640-16400141696039.webp)
+![图片](https://raw.githubusercontent.com/a-enll/FigureBed/main/img/202112211140097.webp)
 
-![图片](D:\Typora\图像\640-164001421205111.webp)
+![图片](https://raw.githubusercontent.com/a-enll/FigureBed/main/img/202112211140775.webp)
 
 git分支中常用指令：
 
